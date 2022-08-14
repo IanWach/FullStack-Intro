@@ -12,6 +12,16 @@ CREATE TABLE todo(
     id serial PRIMARY KEY,
     description VARCHAR NOT NULL);
     """)
+cur.execute("""
+INSERT INTO todo (id, description) VALUES (1, 'This it');
+""")
+
+cur.execute("""
+INSERT INTO todo (id, description) VALUES (2, 'This not');
+""")
+cur.execute("""
+INSERT INTO todo (id, description) VALUES (3, 'This it is');
+""")
     
 conn.commit()
 cur.close()
